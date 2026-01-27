@@ -100,7 +100,7 @@ public class ExpensesPage extends BasePage {
         WebUI.clickElement(buttonSave);
     }
 
-    public void verifyUpdatedContract() {
+    public void verifyUpdatedExpense() {
         AssertHelper.assertEquals(WebUI.getTextElement(alertSuccess), "Expense updated successfully.", "Alert Success after updated does not match");
         AssertHelper.assertEquals(WebUI.getTextElement(expenseName), "Bin Name Updated", "Expense Name after updated does not match");
         AssertHelper.assertEquals(WebUI.getTextElement(updatedExpenseAmount), "$2,000.00", "Expense Amount after updated does not match");
@@ -111,7 +111,7 @@ public class ExpensesPage extends BasePage {
         WebUI.acceptAlert();
     }
 
-    public void verifyDeletedContract() {
+    public void verifyDeletedExpense() {
         WebUI.waitForElementVisible(alertSuccess);
         AssertHelper.assertEquals(WebUI.getTextElement(alertSuccess), "Expense deleted", "Alert Success after deleted does not match");
         WebUI.waitForElementVisible(buttonX);

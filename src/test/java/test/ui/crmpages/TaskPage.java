@@ -98,9 +98,14 @@ public class TaskPage extends BasePage {
 
     public void markCompletedAndRefreshPage()
     {
+        WebUI.waitForElementVisible(markComplete);
         WebUI.clickElement(markComplete);
+        WebUI.waitForElementVisible(markComplete);
         WebUI.clickElement(closePopUp);
-        WebUI.waitForPageRefresh(binTask);
+        WebUI.waitForElementVisible(switchToList);
+        WebUI.clickElement(switchToList);
+        WebUI.waitForElementVisible(switchToKanBan);
+        WebUI.clickElement(switchToKanBan);
     }
 
     public void verifyCompleteTasksAfterRefreshed()
@@ -111,6 +116,7 @@ public class TaskPage extends BasePage {
 
     public void editTask()
     {
+        WebUI.waitForElementVisible(binTask);
         WebUI.clickElement(binTask);
         WebUI.clickElement(menu);
         WebUI.clickElement(editOption);

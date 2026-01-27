@@ -169,6 +169,7 @@
                     <configuration>
                         <suiteXmlFiles>
                             <suiteXmlFile>src/test/resources/suites/UI_SuiteRegressionTest.xml</suiteXmlFile>
+                            <!--<suiteXmlFile>src/test/resources/suites/API_SuiteExecution.xml</suiteXmlFile>-->
                             <!--suiteXmlFile>src/test/resources/suites/UI_ATEPractice.xml</suiteXmlFile/>-->
                         </suiteXmlFiles>
                         <argLine>

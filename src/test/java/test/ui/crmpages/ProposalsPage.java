@@ -55,7 +55,7 @@ public class ProposalsPage extends BasePage {
     private By tableProposal = By.xpath("//tr[1]//td[1]//a[contains(@href,'list_proposals')]");
     private By tableSubject = By.xpath("//tr[1]//td[2]//a[normalize-space()='Bin Subject']");
     private By tableTo = By.xpath("//a[contains(text(),'Bin Customer')]");
-    private By tableTotal = By.xpath("//td[contains(text(),'$1,000.00')]");
+    private By tableTotal = By.xpath("//td[contains(text(),'€1.000,00')]");
     private By tableDate = By.xpath("//td[normalize-space()='20-12-2028']");
     private By tableOpenTill = By.xpath("//td[normalize-space()='27-12-2028']");
     private By tableCreated = By.xpath("//td[@class='sorting_1']");

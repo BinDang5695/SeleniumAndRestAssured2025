@@ -13,7 +13,7 @@ public class BookPOJO_Lombok_Builder {
     public static BookPOJO_Lombok getDataToCreateBook() {
         return BookPOJO_Lombok.builder()
                 .name(faker.book().title())
-                .category_id(139)
+                .category_id(594)
                 .price(faker.number().numberBetween(1, 9999))
                 .release_date(
                         faker.timeAndDate()
@@ -36,8 +36,5 @@ public class BookPOJO_Lombok_Builder {
                 .image_ids(Collections.singletonList(61))
                 .build();
     }
-
-
-
 
 }

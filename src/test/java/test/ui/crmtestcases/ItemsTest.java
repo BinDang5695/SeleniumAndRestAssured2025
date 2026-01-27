@@ -15,7 +15,7 @@ public class ItemsTest extends BaseTest {
     @Issue("CRM-15")
     @Description("Add new Item, verify and delete Item")
     @Test(priority = 0)
-    public void manageKnowledgeBase() {
+    public void manageItems() {
         loginPage().loginCRM();
         dashboardPage().verifyDashboardPage("Invoices Awaiting Payment", "1 / 3");
         basePage().clickMenuSales();

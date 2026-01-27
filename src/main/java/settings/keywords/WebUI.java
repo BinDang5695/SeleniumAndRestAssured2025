@@ -382,7 +382,7 @@ public class WebUI {
             // Step 1: Click vào input form
             LogUtils.info("🔘 Clicking on file upload element: " + elementFileForm);
             WebUI.clickElement(elementFileForm);
-            WaitHelper.sleep(3);
+            WaitHelper.sleep(10);
 
             // Step 2: Copy file path vào clipboard
             LogUtils.info("📋 Copying file path to clipboard...");
@@ -397,14 +397,14 @@ public class WebUI {
             rb.keyRelease(KeyEvent.VK_CONTROL);
             rb.keyRelease(KeyEvent.VK_V);
 
-            WaitHelper.sleep(3);
+            WaitHelper.sleep(10);
 
             // Step 4: Nhấn Enter để xác nhận chọn file
             LogUtils.info("⏎ Pressing ENTER to confirm upload...");
             rb.keyPress(KeyEvent.VK_ENTER);
             rb.keyRelease(KeyEvent.VK_ENTER);
 
-            WaitHelper.sleep(3);
+            WaitHelper.sleep(10);
 
             // Step 5: Kết thúc
             LogUtils.info("✅ File uploaded successfully.");
@@ -679,7 +679,10 @@ public class WebUI {
         wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
     }
 
-
+    public static void waitForTextToBe(By by, String expectedText) {
+        new WebDriverWait(getDriver(), Duration.ofSeconds(timeout))
+                .until(ExpectedConditions.textToBe(by, expectedText));
+    }
 
 
 }

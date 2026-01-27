@@ -23,9 +23,9 @@ public class ExpensesTest extends BaseTest {
         expensesPage().addNewExpense();
         expensesPage().verifyCreatedExpense();
         expensesPage().updateExpense();
-        expensesPage().verifyUpdatedContract();
+        expensesPage().verifyUpdatedExpense();
         expensesPage().deleteExpense();
-        expensesPage().verifyDeletedContract();
+        expensesPage().verifyDeletedExpense();
         expensesPage().verifyTooltipContent();
         headerPage().logout();
     }

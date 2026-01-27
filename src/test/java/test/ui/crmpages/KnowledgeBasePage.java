@@ -58,6 +58,7 @@ public class KnowledgeBasePage extends BasePage {
         WebUI.moveToElement(createdArticle);
         WebUI.waitForElementVisible(buttonView);
         WebUI.clickElement(buttonView);
+
         Set<String> allTabs = DriverManager.getDriver().getWindowHandles();
         String tab2 = null;
 
